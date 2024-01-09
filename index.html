@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  </head>
+  <body class="body">
+    <header>
+      <nav class="navbar">
+        <div class="logo"><h2>Pixel Edit</h2></div>
+        <ul class="navmenu">
+          <li class="navitem"><a href="#" class="nav-list">Home</a></li>
+          <li class="navitem">
+            <a href="about.html" class="nav-list">about</a>
+          </li>
+          <li class="navitem"><a href="#" class="nav-list">Newsletter</a></li>
+          <li class="navitem"><a href="#" class="nav-list">Pricing</a></li>
+          <li class="navitem"><button id="btn">Login/Register</button></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="hero">
+        <div class="main-content">
+          <h1>"Transform your vision with Pixel Edit"</h1>
+          <p>In the world of images, our edits speak louder than words</p>
+          <div class="plan">
+            <div id="btncolor"></div>
+            <button type="button" class="toggle-btn" id="monthly">
+              Monthly
+            </button>
+            <button type="button" class="toggle-btn" id="yearly">Yearly</button>
+          </div>
+          <div class="selectcurrency">
+            <label for="currency">Select Currency:</label>
+            <select id="currency" onchange="toggleGlobalCurrency(this.value)">
+              <option value="USD">USD</option>
+              <option value="INR">INR</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="card-container">
+        <div class="card1" id="basicCard">
+          <h1>Basic Plan</h1>
+          <p class="free">Free</p>
+          <h4>Includes:</h4>
+          <h3 class="basictasks"><i class="ri-check-line"></i>Limited Basic Tasks</h3>
+          <button class="basic-btn">Get started</button>
+        </div>
+        <div class="card1" id="basicCard">
+          <h1>Advanced Plan 🧒</h1>
+          <p id="basicPrice">$10/month</p>
+          <h4>Includes:</h4>
+          <div class="feautre">
+            <li><i class="ri-check-line"></i>Enhanced Image Editing </li>
+            <li><i class="ri-check-line"></i>Higher Resolution Output</li>
+            <li><i class="ri-check-line"></i>Priority Customer Support</li>
+            <li><i class="ri-check-line"></i>Exclusive Filters and Effects</li>
+            <li><i class="ri-check-line"></i>Access to Beta Features</li>
+            <li><i class="ri-check-line"></i>Customizable Watermark Options</li>
+            <li><i class="ri-check-line"></i>Ai colorize image</li>
+          </div>
+          <button class="basic-btn">Subscribe</button>
+        </div>
+        <div class="card1" id="advancedCard">
+          <h1>Pro Plan 🧑</h1>
+          <p id="advancedPrice">$20/month</p>
+          <h4>Includes:</h4>
+          <div class="feautre">
+            <li><i class="ri-check-line"></i>All Advanced Plan Features</li>
+            <li><i class="ri-check-line"></i>24/7 Customer Support</li>
+            <li><i class="ri-check-line"></i>Access to Beta Features</li>
+            <li><i class="ri-check-line"></i>Exclusive Filters and Effects</li>
+            <li><i class="ri-check-line"></i>Personalized Training Sessions</li>
+            <li><i class="ri-check-line"></i>Advanced Color Correction Tools</li>
+            <li><i class="ri-check-line"></i>Advanced Retouching Techniques</li>
+            <li><i class="ri-check-line"></i>Ai generated image</li>
+          </div>
+          <button class="basic-btn">Subscribe</button>
+        </div>
+        <div class="card1" id="proCard">
+          <h1>Ultimate Plan 😎</h1>
+          <p id="proPrice">$30/month</p>
+          <h4>Includes:</h4>
+          <div class="feautre">
+            <li><i class="ri-check-line"></i>All Pro Plan Features</li>
+            <li><i class="ri-check-line"></i>Unlimited High-Resolution Editing</li>
+            <li><i class="ri-check-line"></i>Personalized Training Sessions</li>
+            <li><i class="ri-check-line"></i>Exclusive Access to Premium Content</li>
+            <li><i class="ri-check-line"></i>Priority Access to New Features</li>
+            <li><i class="ri-check-line"></i>24/7 VIP Customer Support</li>
+          </div>
+          <button class="basic-btn">Subscribe</button>
+        </div>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
