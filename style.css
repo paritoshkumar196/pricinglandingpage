@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fff;
+    height: 1000px;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.logo{
+   font-size: 3rem;
+   background:linear-gradient(to right,red,rgb(2, 2, 93));
+   color: transparent;
+   -webkit-background-clip: text;
+   font-weight: 900;
+   margin-left: 3rem;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    height: 6rem;
+    width: auto;
+}
+.navbar .navmenu{
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+
+}
+.navbar .navmenu .navitem{
+    text-decoration: none;
+    margin-right: 4rem;
+    list-style-type: none;
+}
+.navbar .navmenu .navitem a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 600;
+    color: grey;
+}
+.hamburger{
+    font-size: 3rem;
+    display: none;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #410ff8;
+  }
+#btn{
+    border: none;
+    background-color:#410ff8;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    font-family: inherit;
+    font-weight: bold;
+    color:white;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+#btn:hover{
+border: 2px solid black;
+background-color: white;
+color:#410ff8;
+
+}
+@media(max-width:998px)
+{
+html{
+    font-size: 55%;
+}
+}
+@media(max-width:768px)
+{
+    html{
+        font-size: 45%;
+    }
+    .navbar .navmenu{
+       position: fixed;
+       top:45px;
+       left:-100%;
+       background-color: #111;
+       height: 100vh;
+       width: 70%;
+       display: flex;
+       flex-direction: column;
+       transition: left 0.5s ease;
+       z-index: 1000;
+    }
+     .navmenu .show{
+    left:0;
+    } 
+    .navbar .navmenu .navitem{
+        margin: 40px 0;
+    }
+    .navbar .navmenu .navitem a{
+    color:cyan;
+    }
+    .hamburger{
+        display: block;
+        position: fixed;
+        right:1rem;
+        z-index: 999;
+    }
+    .hamburger.show .bar:nth-child(2) {
+        opacity: 0;
+      }
+    
+      .hamburger.show .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+    
+      .hamburger.show .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+      .card-container{
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .card1{
+        margin-bottom: 2rem;
+    }
+
+}
+.main-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 45px;
+}
+.main-content h1{
+    font-size: 3rem;
+    font-weight: 900;
+    color:#410ff8;
+    margin-bottom: 5px;
+}
+.main-content p{
+    font-size: 25px;
+    font-weight: 600;
+    color:grey;
+    text-align: center;
+}
+.plan{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    background-color: #222;
+    border-radius: 30px;
+}
+.toggle-btn{
+  padding:10px 30px;
+  cursor:pointer;
+  background: transparent;  
+  border: 0;
+  outline: none;
+  color: white;
+  font-weight: 600;
+  position: relative;
+}
+#btncolor{
+top:0;
+left:0;
+position: absolute;
+width: 110px;
+height:100%;
+background: #410ff8;
+border-radius: 30px;
+transition: 0.4s;
+}
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card1{
+height:60rem;
+width: 35rem;
+border: 1px dashed black;
+box-shadow: 5px 5px 10px grey;
+border-radius: 10px;
+}
+.card1 h1{
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 20px 30px;
+}
+.card1 p{
+font-weight: 1000;
+font-size: 3rem;
+margin: 20px 30px;
+}
+
+#currency {
+    padding: 8px;
+    font-size: 1.6rem;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    width: 80px;
+  }
+  
+  #currency::after {
+    content: '\25BC'; 
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  #currency option {
+    background-color:#fff;
+    color:#111;
+  }
+.selectcurrency{
+    position: relative;
+    top:-22px;
+}  label{
+    font-size:2rem;
+    font-weight: bold;
+    color:black;
+    margin-left: 5px;
+}
+.basictasks{
+    font-size: 2.5rem;
+    margin-top: 10px;
+    font-weight: 300;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+h4{
+    font-size: 2.5rem; 
+    margin-left: 30px;  
+    color:red;
+}
+.basic-btn{
+    margin-left: 30px;
+    padding:15px 90px;
+    background-color: #410ff8;
+    border: 0;
+    outline: 0;
+    color: black;
+    border-radius: 10px;
+}
+.card1 i{
+    color:green;
+    font-weight: bold;
+}
+.feautre li{
+    font-size: 2rem;
+    line-height: 1.7;
+    color: #111;
+    list-style: none;
+    text-decoration: none;
+    margin-left: 30px;
+    font-family: 'Salsa', cursive;
+    margin-bottom: 5px;
+
+}
