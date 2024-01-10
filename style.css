@@ -280,3 +280,11 @@ h4{
     margin-bottom: 5px;
 
 }
+.footer{
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+    margin-top: 100px;
+}
