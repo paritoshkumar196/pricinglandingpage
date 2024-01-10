@@ -95,7 +95,7 @@ html{
     }
     .navbar .navmenu{
        position: fixed;
-       top:45px;
+       top:0px;
        left:-100%;
        background-color: #111;
        height: 100vh;
@@ -139,7 +139,12 @@ html{
     .card1 {
         margin-bottom: 2rem;
     }  
+
+  .card1 .feautre li {
+    font-size: 2.6rem;
+  }
 }
+
 .main-content{
     display: flex;
     align-items: center;
