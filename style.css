@@ -82,6 +82,11 @@ color:#410ff8;
 html{
     font-size: 55%;
 }
+.card-container{
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 }
 @media(max-width:768px)
 {
@@ -131,10 +136,9 @@ html{
         justify-content: space-between;
         flex-direction: column;
     }
-    .card1{
+    .card1 {
         margin-bottom: 2rem;
-    }
-
+    }  
 }
 .main-content{
     display: flex;
@@ -188,8 +192,9 @@ transition: 0.4s;
     justify-content: space-evenly;
 }
 .card1{
-height:60rem;
-width: 35rem;
+height: 550px;;
+width: 350px;
+max-height: 550px;
 border: 1px dashed black;
 box-shadow: 5px 5px 10px grey;
 border-radius: 10px;
