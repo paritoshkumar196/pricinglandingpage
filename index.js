@@ -117,29 +117,45 @@ function updatePrices() {
   document.getElementById('proPrice').innerText = proPrice;
 }
 //card hover
-const  card=document.querySelectorAll(".card1");
-card.forEach(card=>{
-let button=card.querySelector(".basic-btn")
-card.addEventListener('mousemove',function(){
- card.style.backgroundColor="#410ff8";
- card.style.color="#fff";
- if(button){
-  button.style.backgroundColor="#fff";
-  button.style.color="#410ff8";
- }
- card.addEventListener("mouseout", function () {
-  card.style.backgroundColor = "";
-  card.style.color = "";
+const cards = document.querySelectorAll(".card1");
+
+cards.forEach((card) => {
+  let button = card.querySelector(".basic-btn");
+  let listItems = card.querySelectorAll(".feautre li");
+
+  card.addEventListener("mouseover", function () {
+    card.style.backgroundColor = "#410ff8";
+    card.style.color = "#fff";
+
+    if (button) {
+      button.style.backgroundColor = "#fff";
+      button.style.color = "#410ff8";
+    }
+
+    listItems.forEach((li) => {
+      li.style.color = "#fff";  
+    });
+  });
+
+  card.addEventListener("mouseout", function () {
+    card.style.backgroundColor = "";
+    card.style.color = "";
+
+    if (button) {
+      button.style.backgroundColor = "";
+      button.style.color = "";
+    }
+
+    listItems.forEach((li) => {
+      li.style.color = "";  
+    });
+  });
+
+  card.style.transition = "background-color 0.4s ease, color 0.3s ease";
 
   if (button) {
-    button.style.backgroundColor = "";
-    button.style.color = "";
+    button.style.transition = "background-color 0.4s ease, color 0.3s ease";
   }
-})
-card.style.transition = "background-color 0.4s ease, color 0.3s ease";
-if (button) {
-  button.style.transition = "background-color 0.4s ease, color 0.3s ease";
-}
-})
 });
+
 
