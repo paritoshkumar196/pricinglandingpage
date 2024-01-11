@@ -198,6 +198,7 @@ transition: 0.4s;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap:20px;
 }
 .card1{
 height: 550px;;
